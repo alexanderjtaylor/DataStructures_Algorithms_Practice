@@ -1,3 +1,5 @@
+
+
 def binary_search(lo, hi, condition):
     while lo <= hi:
         mid = (lo + hi) // 2
