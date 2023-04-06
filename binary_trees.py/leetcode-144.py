@@ -1,6 +1,6 @@
 
 
-# binary tree inorder traversal
+# binary tree preorder traversal
 class Node:
     def __init__(self, key):
         self.left = None
@@ -8,23 +8,23 @@ class Node:
         self.val = key
 
 # class Solution:
-#     def inorderTraversal(self, node):
+#     def preorderTraversal(self, node):
 #         if node is None:
 #             return []
 #         else:
 #             res = []
-#             res+=self.inorderTraversal(node.left)
 #             res.append(node.val)
-#             res+=self.inorderTraversal(node.right)
+#             res+=self.preorderTraversal(node.left)
+#             res+=self.preorderTraversal(node.right)
 #         return res
-
- 
-# A function to do inorder tree traversal
-def printInorder(root):
+    
+    
+# A function to do preorder tree traversal
+def printPreorder(root):
     if root:
-        printInorder(root.left)
         print(root.val),
-        printInorder(root.right)
+        printPreorder(root.left)
+        printPreorder(root.right)
  
 if __name__ == "__main__":
     root = Node(1)
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     root.left.left = Node(4)
     root.left.right = Node(5)
  
-    printInorder(root)
+    printPreorder(root)
